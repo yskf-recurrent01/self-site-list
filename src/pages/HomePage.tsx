@@ -10,10 +10,10 @@ type Student = {
 
 export default function HomePage() {
   const [students, setStudents] = useState<Student[]>([]);
-
+  const base = import.meta.env.VITE_API_BASE_URL ?? '';
   useEffect(() => {
     const fetchStudents = async () => {
-      const response = await fetch('/data/data.json', { cache: 'no-store' });
+      const response = await fetch(`${base}/data/data.json`, { cache: 'no-store' });
       const data: Student[] = await response.json();
       setStudents(data);
     };

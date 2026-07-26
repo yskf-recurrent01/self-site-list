@@ -17,5 +17,6 @@ export default defineConfig({
         rewrite: (path) => '/self-site-list' + path
       }
     }
-  }
+  },
+  base: '/self-site-list/'
 })

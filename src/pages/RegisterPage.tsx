@@ -8,10 +8,11 @@ export default function RegisterPage() {
   const [url, setUrl] = useState('');
   const [msg, setMsg] = useState('');
   const navigate = useNavigate();
+  const base = import.meta.env.VITE_API_BASE_URL ?? '';
 
   const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const response = await fetch('/register.php', {
+    const response = await fetch(`${base}/register.php`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json; charset=utf-8',
