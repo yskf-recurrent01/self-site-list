@@ -15,6 +15,11 @@ export default defineConfig({
         target: 'http://localhost:8080',
         changeOrigin: true,
         rewrite: (path) => '/self-site-list' + path
+      },
+      '/list.php': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        rewrite: (path) => '/self-site-list' + path
       }
     }
   },
