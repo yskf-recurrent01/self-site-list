@@ -1,0 +1,45 @@
+.studentList {
+  margin-block: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.studentListItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 1.2rem;
+
+  dt {
+    font-weight: normal;
+  }
+
+  dd {
+    a {
+      color: var(--color-link);
+      text-decoration: underline;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--color-link-hover);
+      }
+    }
+  }
+}
+
+@media screen and (min-width:600px) {
+  .studentListItem {
+    flex-direction: row;
+    gap: 0;
+
+    dt {
+      flex-basis: 30%;
+      flex-grow: 0;
+    }
+
+    dd {
+      flex-grow: 1;
+    }
+  }
+}
