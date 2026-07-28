@@ -52,6 +52,11 @@
   margin-block-start: 2rem;
 }
 
+input[type="text"],
+input[type="url"] {
+  background-color: var(--color-surface);
+}
+
 @media screen and (min-width:600px) {
   .formGroup {
     flex-direction: row;
